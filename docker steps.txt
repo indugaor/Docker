@@ -1,0 +1,106 @@
+VM
+
+Docker
+
+VM vs Docker
+
+Docker Registry vs Docker Repository
+
+Docker Desktop
+
+
+Images
+>docker images
+
+Containers
+>docker ps
+
+Docker hub ==> linux, postgres, mongodb
+>docker pull nginx:1.25.3 
+image pulled
+
+start container
+>docker run nginx:1.25.3
+terminal executes container with image
+
+in new terminal check 
+>docker ps
+
+Detach mode
+>docker run -d nginx:1.25.3
+
+>docker ps
+container id part
+
+>docker logs container id
+display logs 
+
+directly create container without pull
+>docker run nginx:1.24.0
+
+Stop any running container
+>docker stop container id
+
+>docker ps -a
+lists all existing containers
+ 
+>docker start container id
+
+Name of container
+>docker run --name nginxapp -d nginx:1.25.3
+>docker start nginxapp
+
+
+================================
+
+Docker is run on port ==> open port ==> Port Binding (Publish the container from our port 8080 or 9000 to the port 80 of nginx ) ==> 1 service 1 port
+
+localhost:80
+
+>docker run -d -p 9000:80 nginx:1.25.3
+container id part, port no map,.......................
+
+localhost:9000
+
+>docker logs container id
+display browser instance, port no,...................
+
+
+================================
+
+upload our docker image / container
+
+use a dockerfile ==> text file with ins / cmds to assemble an image ==> dockerwill create image
+
+
+create a folder web app in D:
+
+create a HTML, CSS & Docker file 
+
+D:\>cd web app
+
+D:\web app>
+D:\web app>docker build -t webapp:1.0 .
+
+. ==> specifies current dir
+
+>docker images
+
+c:>docker run --name myhtmlapp -d -p 9000:80 webapp:1.0
+
+>docker ps
+
+============================================
+
+Pull Ubuntu and try commands
+
+>docker run -it ubuntu
+
+=============================
+
+close all containers
+>docker stop $(docker ps -aq)
+
+===================================
+
+

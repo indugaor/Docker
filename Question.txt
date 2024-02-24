@@ -1,0 +1,20 @@
+Docker Assignment: Basic Docker Usage
+
+Background:
+You are tasked with a simple assignment to get hands-on experience with Docker. The goal is to build a Docker image for a small application, create and run containers, and understand the basic Docker commands.
+
+Requirements:
+
+Dockerfile:
+Create a Dockerfile for a simple calculator application. You can choose your preferred programming language (e.g., Python).
+The application should print "Hello, Docker!" and do calculations in a menu driven environment when executed.
+
+Building the Image:
+Build a Docker image from the Dockerfile.
+
+Running a Container:
+Run a container from the image you built.
+
+Interactive Shell / Portal:
+Access the application within a running container and show its working.
+Start and stop the containers.
